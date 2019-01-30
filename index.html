@@ -1,0 +1,470 @@
+ <!DOCTYPE html>
+<html lang="en" style="position: relative;">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>client</title>
+	<!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:700" rel="stylesheet"/>
+	<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+	<!-- <link rel="stylesheet" href="assets/css/icons.css"/> -->
+	<link rel="stylesheet" href="assets/css/main.css"/>
+	<link href="assets/images/favicon.ico" rel="shortcut icon">
+</head>
+<body>
+
+	<header class="header">
+		<section class="section-header-top">
+			<div class="container">
+				<div class="content">
+					<div class="header__content">
+						<a href="#" class="logo"><img src="assets/images/logo.png"></a>
+						</h1>
+						<div class="menu-top">
+							<ul>
+								<li onclick="scrollToElement('section--video')" class="active"><a>Trang chủ</a></li>
+								<li onclick="scrollToElement('section--story')"><a>Giới thiệu</a></li>
+								<li onclick="scrollToElement('section--process')"><a>Quy trình</a></li>
+								<li onclick="scrollToElement('section--product')"><a>Sản phẩm</a></li>
+								<li onclick="scrollToElement('section--footer')" class="li-contact"><a>Liên hệ</a></li>
+							</ul>
+						</div>
+						<a class="button-cart">
+							<i class="fa fa-shopping-cart"></i>
+							<span class="number">8</span>
+						</a>
+						<a class="button-toggle"><i class="fa fa-bars"></i></a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</header>
+	<aside class="aside aside-menu">
+		<div class="aside__container">
+			<div class="aside__dimmer"></div>
+			<div class="aside__content">
+				<a class="logo"><img src="assets/images/logo.png"/></a>
+				<ul>
+					<li onclick="scrollToElement('section--video')" class="active"><a href="#">Trang chủ</a></li>
+					<li onclick="scrollToElement('section--story')"><a href="#">Giới thiệu</a></li>
+					<li onclick="scrollToElement('section--process')"><a href="#">Quy trình</a></li>
+					<li onclick="scrollToElement('section--product')"><a href="#">Sản phẩm</a></li>
+					<li onclick="scrollToElement('section--footer')"><a href="#">Liên hệ</a></li>
+				</ul>
+			</div>
+		</div>
+	</aside>
+	<aside class="aside aside-cart">
+		<div class="aside__container">
+			<div class="aside__dimmer"></div>
+			<div class="aside__content">
+				<div class="cart">
+					<div class="cart__header">
+						<h4 class="title">Cart</h4>	
+						<a class="btn btn-icon-only close"><i class="fa fa-remove"></i></a>
+					</div>
+					<div class="cart__body">
+						<div class="">
+							<table class="cart__table">
+								<tbody>
+									<tr class="">
+										<td class="cell-image">
+											<img src="assets/images/product_arabica.png" />
+										</td>
+										<td class="cell-name">
+											<div class="form-group">
+												<label class="control-label">Arabica</label>
+												<div class="form-group-addon">
+													<div class="input-group-addon">
+														<a class="btn btn-icon-only btn--default disable">-</a>
+													</div>
+													<div class="input">
+														<input type="text" class="form-control text-center" placeholder="0"/>
+													</div>
+													<div class="input-group-addon">
+														<a class="btn btn-icon-only btn--default">+</a>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td class="cell-price">
+											<div class="unit">đơn vị: ký</div>
+											<div class="price">150,000.00 d</div>
+										</td>
+										<td class="cell-remove"><a class="btn btn-icon-only"><i class="fa fa-remove"></i></a></td>
+									</tr>
+									<tr class="">
+										<td class="cell-image">
+											<img src="assets/images/product_robusta.png" />
+										</td>
+										<td class="cell-name">
+											<div class="form-group">
+												<label class="control-label">Robusta</label>
+												<div class="form-group-addon">
+													<div class="input-group-addon">
+														<a class="btn btn-icon-only btn--default disable">-</a>
+													</div>
+													<div class="input">
+														<input type="text" class="form-control text-center" placeholder="0"/>
+													</div>
+													<div class="input-group-addon">
+														<a class="btn btn-icon-only btn--default">+</a>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td class="cell-price">
+											<div class="unit">đơn vị: ký</div>
+											<div class="price">150,000.00 d</div>
+										</td>
+										<td class="cell-remove"><a class="btn btn-icon-only"><i class="fa fa-remove"></i></a></td>
+									</tr>
+									<tr class="">
+										<td class="cell-image">
+											<img src="assets/images/process1.png" />
+										</td>
+										<td class="cell-name">
+											<div class="form-group">
+												<label class="control-label">Arabica</label>
+												<div class="form-group-addon">
+													<div class="input-group-addon">
+														<a class="btn btn-icon-only btn--default disable">-</a>
+													</div>
+													<div class="input">
+														<input type="text" class="form-control text-center" placeholder="0"/>
+													</div>
+													<div class="input-group-addon">
+														<a class="btn btn-icon-only btn--default">+</a>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td class="cell-price">
+											<div class="unit">đơn vị: ký</div>
+											<div class="price">150,000.00 d</div>
+										</td>
+										<td class="cell-remove"><a class="btn btn-icon-only"><i class="fa fa-remove"></i></a></td>
+									</tr>
+									<tr class="">
+										<td class="cell-image">
+											<img src="assets/images/process2.png" />
+										</td>
+										<td class="cell-name">
+											<div class="form-group">
+												<label class="control-label">Arabica</label>
+												<div class="form-group-addon">
+													<div class="input-group-addon">
+														<a class="btn btn-icon-only btn--default disable">-</a>
+													</div>
+													<div class="input">
+														<input type="text" class="form-control text-center" placeholder="0"/>
+													</div>
+													<div class="input-group-addon">
+														<a class="btn btn-icon-only btn--default">+</a>
+													</div>
+												</div>
+											</div>
+										</td>
+										<td class="cell-price">
+											<div class="unit">đơn vị: ký</div>
+											<div class="price">150,000.00 d</div>
+										</td>
+										<td class="cell-remove"><a class="btn btn-icon-only"><i class="fa fa-remove"></i></a></td>
+									</tr>
+								</tbody>
+								<!-- <tfoot>
+									<tr>
+										<th colspan="2">Tổng cộng</th>
+										<th colspan="1">600,000.00 d</th>
+										<th></th>
+									</tr>
+								</tfoot> -->
+							</table>
+						</div>	
+					</div>
+					<div class="cart__customerInfo">
+						<div class="total">
+							<div class="total__title">Tổng cộng</div>
+							<div class="total__money">600,000.00 đ</div>
+						</div>
+						<div class="customerInfo">
+							<h4>Thông tin khách hàng</h4>
+							<div class="form-group has-error">
+								<div class="input">
+									<input type="text" class="form-control" placeholder="Tên khách hàng" />
+								</div>
+								<p class="help-block">required</p>
+							</div>
+							<div class="form-group has-error">
+								<div class="input">
+									<input type="tel" class="form-control" placeholder="Số điện thoại" />
+								</div>
+								<p class="help-block">required</p>
+							</div>
+							<div class="form-group has-error">
+								<div class="input">
+									<textarea rows="3" placeholder="Ghi chú" class="form-control"></textarea>
+								</div>
+								<p class="help-block">required</p>
+							</div>
+						</div>
+					</div>
+					<div class="cart__footer">
+						<a class="btn active">Đặt hàng</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</aside>
+	<main class="main">
+
+		<section class="section--video">
+			<div class="container container-fluid">
+				<div class="video">
+					<!-- <video autoplay muted loop id="myVideo">
+					  	<source src="assets/videos/video.mp4" type="video/mp4">
+					</video> -->
+
+					<video autoplay="" class="H_i_h" data-automation="VideoPlayer_video_video" loop="" muted="" playsinline="" poster="https://ak0.picdn.net/shutterstock/videos/22003570/thumb/1.jpg"><source src="assets/videos/video.mp4"><source src="assets/videos/video.mp4" type="video/mp4"></video>
+						
+					<!-- <a class="toggleVideo" id="myBtn" onclick="myFunction()"><i class="ic ic_video_play"></i></a> -->
+				</div>
+			</div>
+		</section>
+		<!-- <section class="section--carousel">
+			<div class="container container-fluid">
+				<div class="carousel-container">
+					<div class="carousels">
+						<div class="carousel">
+							<div class="carousel__image">
+								<img src="assets/images/carousel_01.png"/>
+							</div>
+						</div>
+						<div class="carousel">
+							<div class="carousel__image">
+								<img src="assets/images/carousel_01.png"/>
+							</div>
+						</div>
+						<div class="carousel">
+							<div class="carousel__image">
+								<img src="assets/images/carousel_01.png"/>
+							</div>
+						</div>
+						<div class="carousel">
+							<div class="carousel__image">
+								<img src="assets/images/carousel_01.png"/>
+							</div>
+						</div>
+						<div class="carousel">
+							<div class="carousel__image">
+								<img src="assets/images/carousel_01.png"/>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-nav">
+						<a class="carousel-prev"><i class="fa fa-angle-left"></i></a>
+						<a class="carousel-next"><i class="fa fa-angle-right"></i></a>
+					</div>
+				</div>
+			</div>
+		</section> -->
+		<section class="section section--story">
+			<div class="container">
+				<div class="content">
+					<div class="story">
+						<div class="story__content">
+							<div class="story__header">
+								<h2 class="pageTitle"><span>out story</span></h2>
+								<div class="beans">
+									<i class="ic ic_bean"></i>
+									<i class="ic ic_bean"></i>
+									<i class="ic ic_bean"></i>
+								</div>
+							</div>
+							<div class="story__body">
+								Chúng tôi muốn tạo ra dấu ấn khác biệt bằng sự tử tế và cẩn trọng trong từng công đoạn. Chúng tôi ươm mầm, chăm dưỡng kỹ lưỡng cây cà phê dưới các chuẩn mực khắt khe để đưa ra thị trường những thành phẩm tuyệt vời nhất. Chúng tôi muốn góp phần mang đến tay người tiêu dùng cà phê Việt Nam chất lượng và an toàn.
+							</div>
+						</div>
+						<div class="story__image">
+							<img src="assets/images/story.png"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section section--process">
+			<div class="container">
+				<div class="content">
+					<h2 class="pageTitle"><span>quy trình chế biến</span></h2>
+					<div class="pageDesc">Lorem ipsum dolor sit amet, consectetur.</div>
+					<div class="processes">
+						<div class="processGroup">
+							<div class="process process--1">
+								<div class="process__content">
+									<div class="title">chọn hạt cà phê tươi</div>
+									<div class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt ut consequuntur nisi totam magni, tenetur corporis magnam autem alias quia.</div>
+								</div>
+							</div>
+							<div class="process process--3">
+								<div class="process__content">
+									<div class="title">sẵn sàn thưởng </div>
+									<div class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt ut consequuntur nisi totam magni, tenetur corporis magnam autem alias quia.</div>
+								</div>
+							</div>
+						</div>
+						<img src="assets/images/processes.png" class="processes__image" />
+						<div class="processGroup">
+							<div class="process process--2">
+								<div class="process__content">
+									<div class="title">Rang cà phê</div>
+									<div class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt ut consequuntur nisi totam magni, tenetur corporis magnam autem alias quia.</div>
+								</div>
+							</div>
+							<div class="process process--4">
+								<div class="process__content">
+									<div class="title">xay hạt cà phê</div>
+									<div class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt ut consequuntur nisi totam magni, tenetur corporis magnam autem alias quia.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section section--product">
+			<div class="container">
+				<div class="content">
+					<h2 class="pageTitle"><span>sản phẩm</span></h2>
+					<div class="pageDesc">Chúng tôi cam kết đem đến cho người dùng những túi cà phê chất lượng và an toàn cho sức khỏe.</div>
+					<div class="products">
+						<div class="product product--1">
+							<div class="product__content">
+								<h3 class="name">cà phê arabica</h3>
+								<div class="desc">
+									<p>Café hạt hơi dài, được trồng ở độ cao trên 600m, khí hậu mát mẻ.</p>
+									<p>Cách chế biến là điểm tạo ra sự khác biệt của Arabica. Quả cà phê Arabica được thu hoạch, lên men, rửa sạch rồi sấy. Chính vì thế, vị của Arabica hơi chua, và đây cũng được coi là 1 đặc điểm cảm quan của loại café này. Vì thế, cafe Arabica có hậu vị, nhưng không phải là vị chua, mà phải chuyển từ chua sang đắng. Người ta thường ví vị chua đó giống như khi mình ăn chanh, sẽ thấy rất chua, nhưng lập tức thấy được vị đắng của vỏ.</p>
+								</div>
+								<div class="order">
+									<div class="form-group">
+										<label class="control-label">Số lượng</label>
+										<div class="form-group-addon">
+											<div class="input-group-addon">
+												<a class="btn btn-icon-only btn--default disable">-</a>
+											</div>
+											<div class="input">
+												<input type="text" class="form-control text-center" placeholder="0"/>
+											</div>
+											<div class="input-group-addon">
+												<a class="btn btn-icon-only btn--default">+</a>
+											</div>
+										</div>
+									</div>
+									<a class="btn btn-icon btn--default addToCard">
+										<i class="ic ic_cart"></i>
+										<span>Thêm vào giỏ hàng</span>
+									</a>
+								</div>
+							</div>
+							<div class="product__image">
+								<img src="assets/images/product_arabica.png" alt="arabica"/>
+							</div>
+						</div>
+						<div class="product product--2">
+							<div class="product__content">
+								<h3 class="name">cà phê robusta</h3>
+								<div class="desc">
+									<p>Café hạt hơi dài, được trồng ở độ cao trên 600m, khí hậu mát mẻ.</p>
+									<p>Cách chế biến là điểm tạo ra sự khác biệt của Arabica. Quả cà phê Arabica được thu hoạch, lên men, rửa sạch rồi sấy. Chính vì thế, vị của Arabica hơi chua, và đây cũng được coi là 1 đặc điểm cảm quan của loại café này. Vì thế, cafe Arabica có hậu vị, nhưng không phải là vị chua, mà phải chuyển từ chua sang đắng. Người ta thường ví vị chua đó giống như khi mình ăn chanh, sẽ thấy rất chua, nhưng lập tức thấy được vị đắng của vỏ.</p>
+								</div>
+								<div class="order">
+									<div class="form-group">
+										<label class="control-label">Số lượng</label>
+										<div class="form-group-addon">
+											<div class="input-group-addon">
+												<a class="btn btn-icon-only btn--default disable">-</a>
+											</div>
+											<div class="input">
+												<input type="text" class="form-control text-center" placeholder="0"/>
+											</div>
+											<div class="input-group-addon">
+												<a class="btn btn-icon-only btn--default">+</a>
+											</div>
+										</div>
+									</div>
+									<a class="btn btn-icon btn--default addToCard">
+										<i class="ic ic_cart"></i>
+										<span>Thêm vào giỏ hàng</span>
+									</a>
+								</div>
+							</div>
+							<div class="product__image">
+								<img src="assets/images/product_robusta.png" alt="robusta"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<section class="section section--footer">
+			<div class="container">
+				<div class="content">
+					<h2 class="pageTitle"><span>liên hệ</span></h2>
+					<div class="pageDesc">Để lại tin nhắn cho chúng tôi nếu bạn có bất kỳ câu hỏi nào, chúng tôi sẽ trả lời sớm nhất có thể.</div>
+					<div class="footer__content">
+						<div class="footer__content__left">
+							<div class="infoContact">
+								<a class="logo"><img src="assets/images/logo.png"/></a>
+								<div class="form-group">
+									<div class="control-label">Số điện thoại</div>
+									<div class="form-control-static">0967 39 40 41</div>
+								</div>
+								<div class="form-group">
+									<div class="control-label">Email</div>
+									<div class="form-control-static">chienroastedcoffee@gmail.com</div>
+								</div>
+							</div>
+						</div>
+						<div class="footer__content__right">
+							<div class="form">
+								<div class="form__body">
+									<div class="form-group has-error">
+										<div class="input">
+											<input type="text" class="form-control" placeholder="Tên của bạn"/>
+										</div>
+										<p class="help-block">required</p>
+									</div>
+									<div class="form-group">
+										<div class="input">
+											<input type="text" class="form-control" placeholder="Số điện thoại"/>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="input">
+											<input type="text" class="form-control" placeholder="Email"/>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="input">
+											<textarea class="form-control" rows="3" placeholder="Lời nhắn của bạn"></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="form__actions">
+									<a class="btn submit">Gửi</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</footer>
+
+	
+
+	<script src="assets/js/jquery-2.2.0.min.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+</html>

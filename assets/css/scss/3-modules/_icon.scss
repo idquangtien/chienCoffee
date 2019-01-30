@@ -1,0 +1,31 @@
+// ============================================================
+// ICON
+// ============================================================
+.ic {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% 100%;
+	&.middle {
+		vertical-align: middle;
+	}
+}
+
+
+$icons: 
+	 "ic_arrow_left"
+	,"ic_arrow_right"
+	,"ic_bean"
+	,"ic_cart"
+	,"ic_video_play"
+	,"ic_video_pause"
+	;
+	
+@each $icon in $icons {
+	.ic.#{$icon} {
+		background-image: url($path-image-icon + $icon + ".png") !important;
+	}
+}

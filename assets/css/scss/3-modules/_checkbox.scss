@@ -1,0 +1,46 @@
+.checkbox-label {
+	span:first-child {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		line-height: 18px;
+		text-align: center;
+		border: 2px solid $border;
+		transition: .3s;
+		
+		&:after {
+			content: "\f00c";
+			font-family: fontawesome;
+			color: $primary;
+			opacity: 0;
+		}
+		& + span {
+			margin-left: 5px;	
+		}
+	}
+	&.checked {
+		span:first-child {
+			border-color: $primary;
+			color: $success;
+			&:after {
+				opacity: 1;
+			}
+		}
+		&.success {
+			span:first-child {
+				border-color: $success;
+				background-color: $success;
+				&:after {
+					color: white;
+				}
+			}
+		}
+	}
+	&.disable {
+		pointer-events: none;
+		opacity: .5;
+		span:first-child {
+
+		}
+	}
+}

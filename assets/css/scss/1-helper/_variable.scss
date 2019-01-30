@@ -1,0 +1,99 @@
+// =============================================
+// COLOR
+// =============================================
+$primary: #3d2318;
+$accent: #fbd100;
+$success: mediumseagreen;
+$info: dodgerblue;
+$warning: orange;
+$danger: tomato;
+$default: #e5e5e5;
+
+$link: #007cff;
+$text: #545454;
+$border: #e8e8e8;
+$bg: #0B1422;
+
+$black: black;
+$white: white;
+
+$red: red;
+$green: green;
+$blue: blue;
+$teal: #2dc4b9;
+// =============================================
+// SIZE
+// =============================================
+$base-font-family: Helvetica, Arial, sans-serif !default;
+$fixed-font-family: monospace !default;
+
+$font-family: Helvetica, Arial, sans-serif !default;;
+$font-size: 14px;
+
+
+// $xs: 567px;
+// $sm: 568px;
+// $md: 768px;
+// $lg: 1024px;
+// $xl: 1280px;
+
+$xs: 480px;
+$sm: 768px;
+$md: 1024px;
+$lg: 1280px;
+$xl: 1281px;
+
+// $breakpoints: (
+// 	 "xs": 567px
+// 	,"sm": 568px
+// 	,"md": 768px
+// 	,"lg": 1024px
+// 	,"xl": 1280px
+// );
+$breakpoints: (
+	 "lg": 1280px
+	,"md": 1024px
+	,"sm": 768px 
+	,"xs": 568px
+	
+	
+	
+);
+
+$space: 10px;
+$height: 36px;
+$header_height: 70px;
+$container: 1000px;
+$result: 1150px;
+
+
+$f-height: 40px;
+$f-border: #ddd;
+$f-error: red;
+$f-success: green;
+// =============================================
+// Z-INDEX
+// =============================================
+$z-index-dimmer:  10 !default;
+$z-index-dropdown-backdrop:  990 !default;
+$z-index-dropdown:          1000 !default;
+$z-index-fixed:             1030 !default;
+$z-index-sticky:            1030 !default;
+$z-index-modal-backdrop:    1040 !default;
+$z-index-modal:             1050 !default;
+$z-index-popover:           1060 !default;
+$z-index-tooltip:           1070 !default;
+// =============================================
+// PATH
+// =============================================
+$path-image: "../images/";
+$path-image-icon: "../images/icons/";
+$path-image-flag: "../images/flags/";
+
+// .content {
+// @include typography;
+// @include buttons;
+// @include lists;
+// @include forms;
+// ...
+// }

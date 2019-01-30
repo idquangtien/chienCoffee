@@ -1,0 +1,22 @@
+.grid {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	@for $i from 1 through 10 {
+		&-gap-#{$i * 5} { grid-gap: #{$i * 5}px; }
+	}
+	@each $key, $value in $breakpoints {
+		@if($key != "xs") {
+			@include media-breakpoint-up($value) {
+				@for $i from 1 through 12 {
+					& > .cell-#{$key}-#{$i} { grid-column: span $i }
+				}
+			}
+		} @else {
+			@include media-breakpoint-down($value) {
+				@for $i from 1 through 12 {
+					& > .cell-#{$key}-#{$i} { grid-column: span $i }
+				}
+			}
+		}
+	}
+}

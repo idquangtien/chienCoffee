@@ -1,0 +1,38 @@
+[data-lorem] img {
+    float: right;
+    margin-top: 5px;
+}
+
+[data-lorem] h2 {
+    float: left;
+    margin: 0;
+}
+
+[data-lorem] {
+    margin-top: 2em;
+    line-height: 1.5;
+    text-align: justify;
+    background: #eee;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+[data-lorem] .sticky {
+    background: #3A5E8C;
+    padding: 15px 10px;
+    color: white;
+    border-radius: 5px;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sticky {
+	position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -o-sticky;
+    position: -ms-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}

@@ -1,0 +1,102 @@
+.formStep-container {
+	width: 600px;
+}
+.formStep {
+	$ms-line: rgba(255,255,255,.75);
+	$ms-line-active: rgba(255,255,255,.75);
+	$ms-active: #cc0000;
+	$ms-done: #009688;
+	position: relative;
+	display: block;
+	margin: 0px auto;
+	.formStep__header {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		font-size: 14px;
+		background-color: #33465d;
+		padding: 20px;
+		counter-reset: sothutu;
+		li {
+			flex: 1;
+			position: relative;
+			color: $ms-line;
+			a {
+				line-height: -30px;
+				display: inline-block;
+				position: relative;
+				top: -10px;
+			}
+			&:before {
+				content: counter(sothutu);
+				counter-increment: sothutu;
+				width: 30px;
+				height: 30px;
+				line-height: 27px;
+				text-align: center;
+				color:  $ms-line;
+				border: 1px solid $ms-line;
+				border-radius: 50%;
+				margin-right: 10px;
+				display: inline-block;
+				font-weight: bold;
+				box-shadow: 0 0 2px rgba(255,255,255,.75);
+			}
+			&:after {
+				content: "";
+				position: absolute;
+				left: 30px;
+				top: 50%;
+				width: calc(100% - 30px);
+				height: 1px;
+				background-color: $ms-line;
+			}
+			&:hover {
+				cursor: pointer;
+				color: $ms-line-active;
+				&:before {
+					border-color: $ms-line-active;
+					color: $ms-line-active;
+				}
+				&:after {
+					background-color: $ms-line-active;
+				}
+			}
+		}
+		li.done {
+			&:before {
+				border-color: $ms-done;
+				background-color: $ms-done;
+				color: $ms-line-active;
+			}
+			&:after {
+				background-color: $ms-done;
+			}
+		}
+		li.active {
+			&:before {
+				border-color: $ms-active;
+				background-color: $ms-active;
+				color: $ms-line-active;
+			}
+			&:after {
+				// background-color: rgba(255,0,0,0.75);
+			}
+		}
+	}
+	.formStep__body {
+		.formStep__content {
+			display: none;
+			background-color: #eee;
+			padding: 10px;
+			&.active {
+				display: block;
+			}
+
+		}
+	}
+	.formStep__footer {
+
+	}
+}

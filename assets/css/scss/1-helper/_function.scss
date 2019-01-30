@@ -1,0 +1,22 @@
+// background-color: desaturate(#f00, 20%); // màu sậm hơn
+// background-color: saturate(#f00, 20%); // màu lợt hơn
+// background-color: transparentize(red, 0.5);
+
+// ====================================================================
+// input: background-color
+// output : text-color (black or white contract with background)
+// ====================================================================
+@function text-contract($color) {
+	@if lightness($color) < 50% {
+		@return lighten($color, 70%);
+	} @else {
+		@return darken($color, 70%);
+	}
+}
+@function f-lightness($color, $percent) {
+	@if lightness($color) < 50% {
+		@return lighten($color, $percent);
+	} @else {
+		@return darken($color, $percent);
+	}
+}

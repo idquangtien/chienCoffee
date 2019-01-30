@@ -1,0 +1,34 @@
+.tab-h {
+	& > .tab__header {
+		.tab-link {
+			background-color: #3d4557;
+			color: rgba(255,255,255,.5);
+			height: $height;
+			line-height: $height - 4px;
+			&.active {
+				background-color: #495365;
+				color: rgba(255,255,255,1);
+				border-top: 4px solid #686f80;
+				border-right: 2px solid #2a3342;
+			}
+		}
+	}
+	& > .tab__body {
+		background-color: #495365;
+		.tab-content {
+			display: none;
+			&.active {
+				display: block;
+			}
+		}
+	}
+}
+.tab--fluid {
+	& > .tab__header {
+		display: flex;
+		.tab-link {
+			flex: 1px;
+			text-align: center;
+		}
+	}
+}

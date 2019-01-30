@@ -1,0 +1,67 @@
+
+.accordion {
+	&__header {
+		display: flex;
+		align-items: center;
+		height: 40px;
+		background-color: #293243;
+		color: white;
+		.title {
+			flex: 1;
+			font-size: 18px;
+			padding-left: 20px;
+		}
+		.toggle {
+			display: block;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			&:after {
+				content: "\f105";
+				font-family: fontawesome;
+			}
+			&:hover {
+				background-color: rgba(0,0,0,0.1);
+				cursor: pointer;
+			}
+		}
+	}
+	&__body {
+		background-color: white;
+		height: 0;
+		transform: scaleY(0);
+		transform-origin: 0 0 0;
+		transition: 0.5s;
+		overflow: hidden;
+	}
+	&.active {
+		.accordion__header {
+			.toggle {
+				&:after {
+					content: "\f107";
+				}
+			}
+		}
+		.accordion__body {
+			height: auto;
+			transform: scaleY(1);
+		}
+	}
+	&.primary {
+		// border: 1px solid $primary;
+		.accordion__header {
+			background-color: $primary;
+			color: white;
+		}
+	}
+}
+
+.accordion-group {
+	.accordion {
+		margin-bottom: 1px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

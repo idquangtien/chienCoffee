@@ -1,0 +1,272 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>admin</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:700" rel="stylesheet"/>
+	<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="assets/css/main.css"/>
+	<link href="assets/images/favicon.ico" rel="shortcut icon">
+</head>
+<body>
+	<header class="header">
+		<section class="section-header-top">
+			<div class="container">
+				<div class="content">
+					<div class="header__content">
+						<a href="#" class="logo"><img src="assets/images/logo.png"></a>
+						</h1>
+						<div class="menu-top">
+							<ul>
+								<li onclick="scrollToElement('section--product')" class="active"><a>Product</a></li>
+								<li onclick="scrollToElement('section--customer')"><a>Customer</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</header>
+	<main class="main">
+		<section class="section--filter">
+			<div class="container">
+				<div class="content">
+					<div class="filters">
+						<div class="filters__left">
+							<div class="filter">
+								<div class="form-group">
+									<div class="input">
+										<input type="text" class="form-control" list="datalistID" placeholder="Name" />
+										<datalist id="datalistID">
+											<option value="Coffee"></option>
+											<option value="Tea"></option>
+											<option value="Moothy"></option>
+										</datalist>
+									</div>
+								</div>
+							</div>
+							<div class="filter">
+								<div class="form-group">
+									<div class="select">
+										<select class="form-control" required>
+											<option value="" disabled selected>Choose type</option>
+											<option value="1">type 1</option>
+											<option value="2">type 2</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="filters__right">
+							<div class="filter">
+								<a class="btn btn-icon-only btn--primary"><i class="fa fa-plus"></i></a>
+							</div>
+							<div class="filter">
+								<a class="btn btn-icon-only btn--accent"><i class="fa fa-edit"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section--table">
+			<div class="container">
+				<div class="content">
+					<div class="table-container">
+						<table class="table">
+							<thead>
+								<tr>
+									<th width="50px">#</th>
+									<th>Name</th>
+									<th>Price</th>
+									<th>Type</th>
+									<th>Quantity</th>
+									<th width="1"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>Coffee</td>
+									<td>200.000,00</td>
+									<td>Capuchino</td>
+									<td>1.000</td>
+									<td><a class="delete"><i class="fa fa-remove"></i></a></td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Tea</td>
+									<td>200.000,00</td>
+									<td>Macchiato</td>
+									<td>1.000</td>
+									<td><a class="delete"><i class="fa fa-remove"></i></a></td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Soda</td>
+									<td>200.000,00</td>
+									<td>Bufferly</td>
+									<td>1.000</td>
+									<td><a class="delete"><i class="fa fa-remove"></i></a></td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>Moothy</td>
+									<td>200.000,00</td>
+									<td>Mango</td>
+									<td>1.000</td>
+									<td><a class="delete"><i class="fa fa-remove"></i></a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Tea</td>
+									<td>200.000,00</td>
+									<td>Tea mango</td>
+									<td>1.000</td>
+									<td><a class="delete"><i class="fa fa-remove"></i></a></td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Coffee</td>
+									<td>200.000,00</td>
+									<td>Capuchino</td>
+									<td>1.000</td>
+									<td><a class="delete"><i class="fa fa-remove"></i></a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Name</td>
+									<td>200.000,00</td>
+									<td>Capuchino</td>
+									<td>1.000</td>
+									<td><a class="delete"><i class="fa fa-remove"></i></a></td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Name</td>
+									<td>200.000,00</td>
+									<td>Capuchino</td>
+									<td>1.000</td>
+									<td><a class="delete"><i class="fa fa-remove"></i></a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Name</td>
+									<td>200.000,00</td>
+									<td>Capuchino</td>
+									<td>1.000</td>
+									<td><a class="delete"><i class="fa fa-remove"></i></a></td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Name</td>
+									<td>200.000,00</td>
+									<td>Capuchino</td>
+									<td>1.000</td>
+									<td><a class="delete"><i class="fa fa-remove"></i></a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Name</td>
+									<td>200.000,00</td>
+									<td>Capuchino</td>
+									<td>1.000</td>
+									<td><a class="delete"><i class="fa fa-remove"></i></a></td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Name</td>
+									<td>200.000,00</td>
+									<td>Capuchino</td>
+									<td>1.000</td>
+									<td><a class="delete"><i class="fa fa-remove"></i></a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Name</td>
+									<td>200.000,00</td>
+									<td>Capuchino</td>
+									<td>1.000</td>
+									<td><a class="delete"><i class="fa fa-remove"></i></a></td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Name</td>
+									<td>200.000,00</td>
+									<td>Capuchino</td>
+									<td>1.000</td>
+									<td><a class="delete"><i class="fa fa-remove"></i></a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Name</td>
+									<td>200.000,00</td>
+									<td>Capuchino</td>
+									<td>1.000</td>
+									<td><a class="delete"><i class="fa fa-remove"></i></a></td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Name</td>
+									<td>200.000,00</td>
+									<td>Capuchino</td>
+									<td>1.000</td>
+									<td><a class="delete"><i class="fa fa-remove"></i></a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Name</td>
+									<td>200.000,00</td>
+									<td>Capuchino</td>
+									<td>1.000</td>
+									<td><a class="delete"><i class="fa fa-remove"></i></a></td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Name</td>
+									<td>200.000,00</td>
+									<td>Capuchino</td>
+									<td>1.000</td>
+									<td><a class="delete"><i class="fa fa-remove"></i></a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Name</td>
+									<td>200.000,00</td>
+									<td>Capuchino</td>
+									<td>1.000</td>
+									<td><a class="delete"><i class="fa fa-remove"></i></a></td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Name</td>
+									<td>200.000,00</td>
+									<td>Capuchino</td>
+									<td>1.000</td>
+									<td><a class="delete"><i class="fa fa-remove"></i></a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="pagination flex flex-end margin-top-10">
+						<ul class="">
+							<li><a><i class="fa fa-angle-left"></i></a></li>
+							<li class="active"><a>1</a></li>
+							<li><a>2</a></li>
+							<li><a><i class="fa fa-angle-right"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<script src="assets/js/jquery-2.2.0.min.js"></script>
+	<script src="assets/js/main.js"></script>
+
+	
+
+</body>
+</html>

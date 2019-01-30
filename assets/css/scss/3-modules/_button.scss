@@ -1,0 +1,111 @@
+
+.btn {
+	display: inline-block;
+	height: $f-height;
+	line-height: $f-height;
+	padding: 0px 20px;
+	white-space: nowrap;
+	text-decoration: none;
+	color: inherit;
+	// box-shadow: inset 0px 0px 20px rgba(255,255,255,0.5);
+	&:hover {
+		cursor: pointer;
+	}
+	&--sm {
+		height: 26px;
+		line-height: 26px;
+		padding: 0 10px;
+		font-size: 12px;
+	}
+
+	&--default {
+		background-color: white;
+		color: #333;
+		border: 1px solid $border;
+		// box-shadow: inset 0px 0px 20px rgba(100,100,100,0.5);
+		&:hover {
+			background-color: darken($default, 5%);
+		}
+	}
+	&--primary {
+		background-color: $primary;
+		color: white;
+		&:hover {
+			background-color: darken($primary, 5%);
+		}
+	}
+	&--accent {
+		background-color: $accent;
+		color: white;
+		&:hover {
+			background-color: darken($accent, 5%);
+		}
+	}
+
+	&--success {
+		background-color: $success;
+		color: white;
+		&:hover {
+			background-color: darken($success, 5%);
+		}
+	}
+	&--info {
+		background-color: $info;
+		color: white;
+		&:hover {
+			background-color: darken($info, 5%);
+		}
+	}
+	&--warning {
+		background-color: $warning;
+		color: white;
+		// box-shadow: inset 0px 0px 20px rgba(100,100,100,0.5);
+		&:hover {
+			background-color: darken($warning, 5%);
+		}
+	}
+	&--danger {
+		background-color: $danger;
+		color: white;
+		&:hover {
+			background-color: darken($danger, 5%);
+		}
+	}
+	&.disable {
+		color: rgba(#333,.5);
+		pointer-events: none;
+	}
+}
+.btn.btn-icon {
+	display: inline-flex;
+	align-items: center;
+	i {
+		margin-right: 10px;
+	}
+}
+.btn.btn-icon-only {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: $f-height;
+	padding: 0;
+	text-align: center;
+}
+
+.btn-group {
+	display: flex;
+	.btn {
+		flex: 1;
+	}
+}
+.columns {
+	column-count: 12;
+	column-gap: 10px;
+	column-width: 8.3vw;
+	div {
+		background-color: red;
+		&:nth-child(even) {
+			background-color: yellow;
+		}
+	}
+}

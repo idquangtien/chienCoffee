@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="assets/css/main.css"/>
+</head>
+<body>
+	<button id="openDialog">Вход на сайт</button> 
+	<dialog>
+		<form id="authentication" action="" class="form">
+			<div class="form__header">Header</div>
+			<div class="form__body">
+				<div class="form-group">
+					<div class="input">
+						<input name="login" class="form-control" required autofocus placeholder="Логин"/>
+					</div>
+				</div>
+				<div class="form-group margin-top-10">
+					<div class="input">
+						<input type="password" class="form-control" name="pass" required placeholder="Пароль"/>
+					</div>
+				</div>
+			</div>
+			<div class="form__footer">
+				<p>
+					<button class="btn" type="submit">Войти</button> 
+					<button class="btn" id="closeDialog">Закрыть окно</button>
+				</p>
+			</div>
+			
+			
+		</form> 
+	</dialog>
+	<script>
+		var dialog = document.querySelector('dialog');
+		document.querySelector('#openDialog').onclick = function() {
+			dialog.showModal();
+		}
+		document.querySelector('#closeDialog').onclick = function() {
+			dialog.close();
+		}
+	</script>
+</body>
+</html>

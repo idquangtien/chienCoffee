@@ -1,0 +1,12 @@
+@include media-breakpoint-down($lg) {
+	.section-result {
+		
+		.content {
+			overflow-x: auto;
+			overflow-y: hidden;
+		}
+		.result {
+			
+		}
+	}
+}

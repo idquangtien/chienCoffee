@@ -1,0 +1,39 @@
+.pagination {
+	$border: rgba(white, 0.5);
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		li {
+			display: block;
+			padding: 10px;
+			min-width: 40px;
+			text-align: center;
+			background-color: white;
+			border: 1px solid $border;
+			border-right: none;
+			margin-right: 2px;
+			&:last-child {
+				margin-right: 0;
+				border-right: 1px solid $border;
+			}
+			&:hover:not(.active) {
+				cursor: pointer;
+				background-color: rgba(100,100,100,0.1);
+			}
+			&.active {
+				border-color: lighten($primary,20%);
+				background-color: $primary;
+				color: white;
+			}
+			&.disable {
+				// pointer-events: none;
+				opacity: 0.5;
+				&:hover {
+					cursor: not-allowed;
+				}
+			}
+		}
+	}
+}

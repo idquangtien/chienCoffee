@@ -1,0 +1,35 @@
+$box_size: 20rem;
+$t3d: $box_size / 2 - 1;
+
+// body {
+// 	background-color: #111;
+	
+// }
+
+.dial {
+	position: relative;
+	background-color: #333;
+	width: $box_size;
+	height: $box_size;
+	border-radius: 50%;
+	ul {
+		list-style: none;
+		li {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: .5rem;
+			height: 1rem;
+			margin-left: -0.25rem;
+			transform-origin: 50% 0;
+			background-color: #efefef;
+		}
+	}
+}
+figure:nth-child(1) {
+	@for $i from 1 through 12 {
+		ul > li:nth-of-type( #{$i} ) {
+			transform: rotate(30deg * $i) translate3d(0, $t3d, 0px);
+		}
+	}
+}

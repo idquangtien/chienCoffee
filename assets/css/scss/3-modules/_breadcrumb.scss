@@ -1,0 +1,36 @@
+.breadcrumb {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	margin-bottom: 15px;
+	display: flex;
+	font-size: 16px;
+	li {
+		display: block;
+		color: $link;
+		a {
+			color: inherit;
+		}
+		&:after {
+			content: "\f101";
+			font-family: fontawesome;
+			margin: 0 10px;
+
+		}
+		&:hover:not(:last-child) {
+			a {
+				text-decoration: underline;
+				cursor: pointer;
+			}
+		}
+		&:last-child {
+			color: white;
+			a {
+			}
+			&:after {
+				content: "";
+				margin: 0;
+			}
+		}
+	}
+}

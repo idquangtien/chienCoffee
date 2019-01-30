@@ -1,0 +1,31 @@
+@mixin mixin-loading-bar($height: 10px, $color1: red, $color2: yellow, $angle: -45deg) {
+	@if($height > 50px) {
+		$height: 50px;
+	}	
+	@if($height < 10px) {
+		$height: 10px;
+	}	
+	display: block;
+	width: 100%;
+	height: $height;
+	border-radius: $height;
+	background-image: repeating-linear-gradient(
+		$angle,
+		$color1,
+		$color1 $height,
+		$color2 $height,
+		$color2 ($height * 2)
+	);
+	background-size: ($height * 3 - 2px - ($height / 10)) ($height * 3 - 2px - ($height / 10));
+	animation: loading-bar .5s linear infinite;
+
+	@keyframes loading-bar {
+		0% { background-position: 0 0; }
+		100% { background-position: ($height * 3 - 2px) 0; }
+	}
+}
+
+
+.loading-bar {
+	@include mixin-loading-bar(50px, blue, yellow);
+}

@@ -1,0 +1,135 @@
+// =============================================
+// GRADIENT
+// =============================================
+	@mixin mixin-gradient-top-to-bottom($color1: red, $color2: yellow) {
+	    background: $color1; /* For browsers that do not support gradients */
+	    background: -webkit-linear-gradient($color1, $color2); /* For Safari 5.1 to 6.0 */
+	    background: -o-linear-gradient($color1, $color2); /* For Opera 11.1 to 12.0 */
+	    background: -moz-linear-gradient($color1, $color2); /* For Firefox 3.6 to 15 */
+	    background: linear-gradient($color1, $color2); /* Standard syntax */
+	}
+	@mixin mixin-gradient-left-to-right($color1: red, $color2: yellow) {
+		background: $color1; /* For browsers that do not support gradients */
+		background: -webkit-linear-gradient(left, $color1 , $color2); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(right, $color1, $color2); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(right, $color1, $color2); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(to right, $color1 , $color2); /* Standard syntax */
+	}
+	@mixin mixin-gradient-diagonal($color1: red, $color2: yellow) {
+		background: $color1; /* For browsers that do not support gradients */
+		background: -webkit-linear-gradient(left top, $color1, $color2); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(bottom right, $color1, $color2); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(bottom right, $color1, $color2); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(to bottom right, $color1, $color2); /* Standard syntax */
+	}
+	@mixin mixin-gradient-angles($color1: red, $color2: yellow, $angle: -90deg) {
+		background: $color1; /* For browsers that do not support gradients */
+		background: -webkit-linear-gradient($angle, $color1, $color2); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient($angle, $color1, $color2); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient($angle, $color1, $color2); /* For Firefox 3.6 to 15 */
+		background: linear-gradient($angle, $color1, $color2); /* Standard syntax */
+	}
+	@mixin mixin-gradient-multiple-3 ($color1: red, $color2: yellow, $color3: green) {
+		background: $color1; /* For browsers that do not support gradients */
+		background: -webkit-linear-gradient($color1, $color2, $color3); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient($color1, $color2, $color3); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient($color1, $color2, $color3); /* For Firefox 3.6 to 15 */
+		background: linear-gradient($color1, $color2, $color3); /* Standard syntax */
+	}
+	@mixin mixin-gradient-multiple-7 ($color1: red, $color2: orange, $color3: yellow, $color4: green, $color5: blue, $color6: indigo, $color7: violet) {
+		background: $color1; /* For browsers that do not support gradients */
+		/* For Safari 5.1 to 6.0 */
+		background: -webkit-linear-gradient(left,$color1,$color2,$color3,$color4,$color5,$color6,$color7);
+		/* For Opera 11.1 to 12.0 */
+		background: -o-linear-gradient(left,$color1,$color2,$color3,$color4,$color5,$color6,$color7);
+		/* For Fx 3.6 to 15 */
+		background: -moz-linear-gradient(left,$color1,$color2,$color3,$color4,$color5,$color6,$color7);
+		/* Standard syntax */
+		background: linear-gradient(to right, $color1,$color2,$color3,$color4,$color5,$color6,$color7); 
+	}
+	@mixin mixin-gradient-radial($color1: #ff0000, $color2: #00ff00, $color3: #0000ff) {
+		background: $color1; /* For browsers that do not support gradients */
+		background: -webkit-radial-gradient($color1, $color2, $color3); /* Safari 5.1 to 6.0 */
+		background: -o-radial-gradient($color1, $color2, $color3); /* For Opera 11.6 to 12.0 */
+		background: -moz-radial-gradient($color1, $color2, $color3); /* For Firefox 3.6 to 15 */
+		background: radial-gradient($color1, $color2, $color3); /* Standard syntax */
+	}
+	@mixin mixin-background-dots($color) {
+	    background-image: -moz-linear-gradient(45deg, $color 25%, transparent 25%), 
+	        -moz-linear-gradient(-45deg, $color 25%, transparent 25%), 
+	        -moz-linear-gradient(45deg, transparent 75%, $color 75%), 
+	        -moz-linear-gradient(-45deg, transparent 75%, $color 75%);
+	    background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, $color), color-stop(.25, transparent)), 
+	        -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, $color), color-stop(.25, transparent)), 
+	        -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.75, transparent), color-stop(.75, $color)), 
+	        -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.75, transparent), color-stop(.75, $color));
+	    background-image: -webkit-linear-gradient(45deg, $color 25%, transparent 25%), 
+	        -webkit-linear-gradient(-45deg, $color 25%, transparent 25%), 
+	        -webkit-linear-gradient(45deg, transparent 75%, $color 75%), 
+	        -webkit-linear-gradient(-45deg, transparent 75%, $color 75%);
+	    background-image: -o-linear-gradient(45deg, $color 25%, transparent 25%), 
+	        -o-linear-gradient(-45deg, $color 25%, transparent 25%), 
+	        -o-linear-gradient(45deg, transparent 75%, $color 75%), 
+	        -o-linear-gradient(-45deg, transparent 75%, $color 75%);
+	    background-image: linear-gradient(45deg, $color 25%, transparent 25%), 
+	        linear-gradient(-45deg, $color 25%, transparent 25%), 
+	        linear-gradient(45deg, transparent 75%, $color 75%), 
+	        linear-gradient(-45deg, transparent 75%, $color 75%);
+	    -moz-background-size: 2px 2px;
+	    background-size: 2px 2px;
+	    -webkit-background-size: 2px 2.1px; /* override value for webkit */
+	    background-position: 0 0, 1px 0, 1px -1px, 0px 1px;
+	}
+	@mixin mixin-background-dots-2($bg: white, $dot: black, $size: 2px) {
+		background: linear-gradient(
+		    45deg,
+		    $bg,
+		    $bg 50%,
+		    $dot 50%,
+		    $dot
+		);
+		background-size: $size $size;
+	}
+// =============================================
+// RESPONSIVE
+// =============================================
+	// @mixin mixin-desktop {
+	// 	@media only screen and (min-width: $lg) {
+	// 		@content;
+	// 	}
+	// }
+	// @mixin mixin-tablet-l {
+	// 	@media only screen and (max-width: $lg - 1px) {
+	// 		@content;
+	// 	}
+	// }
+	// @mixin mixin-tablet-p {
+	// 	@media only screen and (max-width: $md - 1px) {
+	// 		@content;
+	// 	}
+	// }
+	// @mixin mixin-mobile {
+	// 	@media only screen and (max-width: $sm - 1px) {
+	// 		@content;
+	// 	}
+	// }
+// =============================================
+// RESPONSIVE
+// =============================================
+	@mixin media-breakpoint-up($size) {
+		@media only screen and (min-width: $size) {
+			@content;
+		}
+	}
+	@mixin media-breakpoint-down($size) {
+		@media only screen and (max-width: $size) {
+			@content;
+		}
+	}
+// =============================================
+// COLOR
+// =============================================
+	@mixin mixin-color-opacity($color: red, $opacity: 0.5) {
+		background-color: $color;
+		background-color: rgba($color, $opacity);
+	}

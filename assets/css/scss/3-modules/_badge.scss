@@ -1,0 +1,59 @@
+.badge {
+	display: inline;
+	min-width: 3rem;
+    padding: 3px 6px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 22px;
+    height: 22px;
+    color: #757575;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    font-weight: 300;
+    font-size: 12px;
+    color: #fff;
+    // background-color: #26a69a;
+    border-radius: 2px;
+
+    text-decoration: none;
+
+    
+
+    &:hover {
+    	
+    }
+
+
+	&--primary {
+		background-color: $primary;
+		
+	}
+	&--success {
+		background-color: $success;
+	}
+	&--info {
+		background-color: $info;
+	}
+	&--warning {
+		background-color: $warning;
+	}
+	&--danger {
+		background-color: $danger;
+	}
+	&--finish, &--done {
+		background-color: $success;
+	}
+	&--running {
+		background-color: $success;
+	}
+	&--stop {
+		background-color: $warning;
+	}
+	&--blocked {
+		background-color: $black;
+	}
+	&--failed {
+		background-color: $danger;
+	}
+}

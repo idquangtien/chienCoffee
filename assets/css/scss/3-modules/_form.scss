@@ -1,0 +1,127 @@
+
+
+
+
+// placeholer cho select
+
+// <select required>
+// 	<option value="" disabled selected>Hãy Chọn Giới Tính</option>
+// 	<option value="nam">Nam</option>
+// 	<option value="nu">Nữ</option>
+// </select>
+
+select {
+	&:required:invalid {
+		color: gray;
+	}
+	option[value=""][disabled] {
+		display: none;
+	}
+	option {
+		color: black;
+	}
+}
+
+.form-control {
+	width: 100%;
+	height: $f-height;
+	display: block;
+	padding: 0 10px;
+	background-color: white;
+	border: 1px solid $f-border;
+	&::placeholder {
+		color: darken($border, 10%);
+	}
+	&:focus {
+		outline: none;
+	}
+}
+textarea.form-control {
+	resize: none;
+	height: initial;
+	padding: 10px;
+}
+
+select.form-control, select.form-control-line {
+	-webkit-appearance: none;
+	border-radius: 0;
+	&::-ms-expand {
+	    display: none;
+	}
+
+}
+.select {
+	position: relative;
+	height: $f-height;
+	&:after {
+		// content: "\25be  or  \25bc  ?  ";
+		content: "\25be";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 10px;
+		margin: auto;
+		display: flex;
+		align-items: center;
+		pointer-events: none;
+		color: $border;
+	}
+	.form-control {
+		padding-right: 24px;
+	}
+}
+
+.input-icon {
+	position: relative;
+	input {
+		padding-left: 30px;
+		& + i {
+			position: absolute;
+			top: 0; bottom: 0;
+			left: 10px;
+			display: flex;
+			align-items: center;
+			color: $border;
+		}
+	}
+}
+
+.form-group-addon {
+	display: flex;
+	.input-group-addon {
+		&:first-child {
+			.btn {
+				border-right: none;
+			}
+		}
+		&:last-child {
+			.btn {
+				border-left: none;
+			}
+		}
+	}
+	.input {
+		flex: 1;
+	}
+}
+.form-group {
+	position: relative;
+	.help-block {
+		position: absolute;
+		right: 0;
+		top: calc(100% + 2px);
+		text-align: right;
+	}
+}
+.form-group.has-error {
+	.form-control {
+		border-color: $danger;
+		color: $danger;
+		&::placeholder {
+			color: $danger;
+		}
+	}
+	.help-block {
+		color: $danger;
+	}
+}

@@ -1,0 +1,41 @@
+.dropdown {
+	position: relative;
+	.dropdown__display {
+
+	}
+	.dropdown__container {
+		display: none;
+		z-index: $z-index-dropdown;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		.dropdown__content {
+			background-color: white;
+			color: black;
+			box-shadow: 1px 1px 2px $border;
+			ul {
+				list-style-type: none;
+				margin: 0;
+				li {
+					display: block;
+					padding: 10px;
+					a {
+						display: block;
+					}
+					&:hover {
+						cursor: pointer;
+						background-color: rgba(gray,.1);
+					}
+				}
+			}
+		}
+	}
+	&:hover {
+		.dropdown__display {
+			cursor: pointer;
+		}
+		.dropdown__container {
+			display: block;
+		}
+	}
+}
